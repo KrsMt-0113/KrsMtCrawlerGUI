@@ -66,6 +66,8 @@ def entity_search(queryString, headers):
     return entities
 
 def main_gui():
+    num = 0
+    offset_limit = 0
     try:
         resp = requests.get("https://api.arkm.com/health", timeout=5)
         if resp.status_code != 200 or resp.text.strip().lower() != "ok":
